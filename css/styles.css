@@ -307,14 +307,11 @@ border: none;
 .modal-icon .icon{
     position: absolute;
     left: 12px;
-    top: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     fill: currentColor;
 }
 .modal-field{
-    display: block;
-
-}
-.modal-field .label{
     display: block;
 font-weight: 400;
 font-size: 12px;
@@ -323,6 +320,7 @@ letter-spacing: 0.01em;
 margin-bottom: 4px;
 text-align: left;
 color: var(--main-color);
+margin-top: 10px;
 
 }
 .label-check{
@@ -381,8 +379,10 @@ padding: 12px 16px;
     margin-left: 12px;
     margin-right: 8px;
 }
-.checkbox-new{
+
+.modal-check::before{
     display: block;
+    content: '';
     position: absolute;
     top: 5px;
     left: 11px;
@@ -394,10 +394,10 @@ transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
 color 250ms cubic-bezier(0.4, 0, 0.2, 1),background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.check-input:focus + .checkbox-new{
+.check-input:focus + .modal-check::before{
 border-color: var(--accent-color);
 }
-.check-input:checked + .checkbox-new{
+.check-input:checked + .modal-check::before{
 background-color: var(--accent-color);
 background-image: url(../images/icon\ check\ 18\ \ 18.svg);
 background-size: contain;   
@@ -586,9 +586,7 @@ left: 0;
 .section-work .item{
     position: relative;
 }
-/* .section-work .work-overlay{
 
-} */
 .team .team-name{
     color: var(--secondary-color);
 font-weight: 500;
@@ -627,9 +625,7 @@ letter-spacing: 0.03em;
 }
 .clients-link .icon{
     fill:currentColor;
-
 }
-
 
 .network-link .link{
     display: flex;
@@ -640,7 +636,6 @@ letter-spacing: 0.03em;
     color: #AFB1B8;
     border-radius: 50%;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .team-worker .network-link .link:hover,
@@ -655,7 +650,6 @@ letter-spacing: 0.03em;
     width: 170px;
     height: 90px; 
     border: 1px solid #AFB1B8;
-
     justify-content: center;
     align-items: center;
     color: #AFB1B8;
@@ -670,7 +664,6 @@ letter-spacing: 0.03em;
     border-radius: 4px; 
 
 }
-
 .footer{
 background-color: var(--bgc-secondary);
 font-weight: 400;
@@ -715,12 +708,8 @@ font-style: normal;
     position: relative;
     padding: 10px 29px;
     text-align: left;
-    
-    
 }
-/* .text-button{
-margin-left: 0;
-} */
+
 .form .icon{
 position: absolute;
 top: 50%;
@@ -760,28 +749,25 @@ border-radius: 50%;
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 0.03em;
-min-width: 200px;
+min-width: 358px;
 padding: 15px 16px;
 cursor: pointer;
 border: 1px solid rgba(255, 255, 255, 0.3);
 border-radius: 4px;
 background: none;
+margin-right: 12px;
 }
 
-.form-field{
-    display: block;
-
-}
 .form{
     margin-left: 93px;
-    display: flex;
     align-items: flex-end;
 }
-.form-input{
-    margin-right: 12px;
-    margin-top: 20px;
-    width: 358px;
-  
+.form-subscribe{
+    display: flex;
+
+}
+.text-form{
+    display: block;
 }
 
 /*стили Портфолио*/
